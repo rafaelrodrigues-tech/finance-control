@@ -1,0 +1,203 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\MyProjects\\financeControl\\FinanceControl\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2A3F5FE7-20A8-A596-3BFE-242871BC59C1}|FinanceControl\\FinanceControl.csproj|d:\\myprojects\\financecontrol\\financecontrol\\financecontrol\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2A3F5FE7-20A8-A596-3BFE-242871BC59C1}|FinanceControl\\FinanceControl.csproj|solutionrelative:financecontrol\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A3F5FE7-20A8-A596-3BFE-242871BC59C1}|FinanceControl\\FinanceControl.csproj|d:\\myprojects\\financecontrol\\financecontrol\\financecontrol\\migrations\\20260805202303_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A3F5FE7-20A8-A596-3BFE-242871BC59C1}|FinanceControl\\FinanceControl.csproj|solutionrelative:financecontrol\\migrations\\20260805202303_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A3F5FE7-20A8-A596-3BFE-242871BC59C1}|FinanceControl\\FinanceControl.csproj|d:\\myprojects\\financecontrol\\financecontrol\\financecontrol\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A3F5FE7-20A8-A596-3BFE-242871BC59C1}|FinanceControl\\FinanceControl.csproj|solutionrelative:financecontrol\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A3F5FE7-20A8-A596-3BFE-242871BC59C1}|FinanceControl\\FinanceControl.csproj|d:\\myprojects\\financecontrol\\financecontrol\\financecontrol\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2A3F5FE7-20A8-A596-3BFE-242871BC59C1}|FinanceControl\\FinanceControl.csproj|solutionrelative:financecontrol\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A3F5FE7-20A8-A596-3BFE-242871BC59C1}|FinanceControl\\FinanceControl.csproj|d:\\myprojects\\financecontrol\\financecontrol\\financecontrol\\data\\financecontroldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A3F5FE7-20A8-A596-3BFE-242871BC59C1}|FinanceControl\\FinanceControl.csproj|solutionrelative:financecontrol\\data\\financecontroldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A3F5FE7-20A8-A596-3BFE-242871BC59C1}|FinanceControl\\FinanceControl.csproj|d:\\myprojects\\financecontrol\\financecontrol\\financecontrol\\models\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A3F5FE7-20A8-A596-3BFE-242871BC59C1}|FinanceControl\\FinanceControl.csproj|solutionrelative:financecontrol\\models\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A3F5FE7-20A8-A596-3BFE-242871BC59C1}|FinanceControl\\FinanceControl.csproj|d:\\myprojects\\financecontrol\\financecontrol\\financecontrol\\controllers\\expensescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A3F5FE7-20A8-A596-3BFE-242871BC59C1}|FinanceControl\\FinanceControl.csproj|solutionrelative:financecontrol\\controllers\\expensescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A3F5FE7-20A8-A596-3BFE-242871BC59C1}|FinanceControl\\FinanceControl.csproj|d:\\myprojects\\financecontrol\\financecontrol\\financecontrol\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2A3F5FE7-20A8-A596-3BFE-242871BC59C1}|FinanceControl\\FinanceControl.csproj|solutionrelative:financecontrol\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A3F5FE7-20A8-A596-3BFE-242871BC59C1}|FinanceControl\\FinanceControl.csproj|d:\\myprojects\\financecontrol\\financecontrol\\financecontrol\\financecontrol.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{2A3F5FE7-20A8-A596-3BFE-242871BC59C1}|FinanceControl\\FinanceControl.csproj|solutionrelative:financecontrol\\financecontrol.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "20260805202303_InitialCreate.cs",
+              "DocumentMoniker": "D:\\MyProjects\\financeControl\\FinanceControl\\FinanceControl\\Migrations\\20260805202303_InitialCreate.cs",
+              "RelativeDocumentMoniker": "FinanceControl\\Migrations\\20260805202303_InitialCreate.cs",
+              "ToolTip": "D:\\MyProjects\\financeControl\\FinanceControl\\FinanceControl\\Migrations\\20260805202303_InitialCreate.cs",
+              "RelativeToolTip": "FinanceControl\\Migrations\\20260805202303_InitialCreate.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-05T20:23:21.564Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\MyProjects\\financeControl\\FinanceControl\\FinanceControl\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "FinanceControl\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\MyProjects\\financeControl\\FinanceControl\\FinanceControl\\Properties\\launchSettings.json",
+              "RelativeToolTip": "FinanceControl\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAcwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-08-05T14:21:40.427Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FinanceControlDbContext.cs",
+              "DocumentMoniker": "D:\\MyProjects\\financeControl\\FinanceControl\\FinanceControl\\Data\\FinanceControlDbContext.cs",
+              "RelativeDocumentMoniker": "FinanceControl\\Data\\FinanceControlDbContext.cs",
+              "ToolTip": "D:\\MyProjects\\financeControl\\FinanceControl\\FinanceControl\\Data\\FinanceControlDbContext.cs",
+              "RelativeToolTip": "FinanceControl\\Data\\FinanceControlDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-05T19:22:59.276Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\MyProjects\\financeControl\\FinanceControl\\FinanceControl\\Program.cs",
+              "RelativeDocumentMoniker": "FinanceControl\\Program.cs",
+              "ToolTip": "D:\\MyProjects\\financeControl\\FinanceControl\\FinanceControl\\Program.cs",
+              "RelativeToolTip": "FinanceControl\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-05T14:20:35.61Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\MyProjects\\financeControl\\FinanceControl\\FinanceControl\\appsettings.json",
+              "RelativeDocumentMoniker": "FinanceControl\\appsettings.json",
+              "ToolTip": "D:\\MyProjects\\financeControl\\FinanceControl\\FinanceControl\\appsettings.json",
+              "RelativeToolTip": "FinanceControl\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-08-05T18:45:03.63Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ExpensesController.cs",
+              "DocumentMoniker": "D:\\MyProjects\\financeControl\\FinanceControl\\FinanceControl\\Controllers\\ExpensesController.cs",
+              "RelativeDocumentMoniker": "FinanceControl\\Controllers\\ExpensesController.cs",
+              "ToolTip": "D:\\MyProjects\\financeControl\\FinanceControl\\FinanceControl\\Controllers\\ExpensesController.cs",
+              "RelativeToolTip": "FinanceControl\\Controllers\\ExpensesController.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAcwAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-05T14:34:06.52Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Expense.cs",
+              "DocumentMoniker": "D:\\MyProjects\\financeControl\\FinanceControl\\FinanceControl\\Models\\Expense.cs",
+              "RelativeDocumentMoniker": "FinanceControl\\Models\\Expense.cs",
+              "ToolTip": "D:\\MyProjects\\financeControl\\FinanceControl\\FinanceControl\\Models\\Expense.cs",
+              "RelativeToolTip": "FinanceControl\\Models\\Expense.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-05T14:36:39.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\MyProjects\\financeControl\\FinanceControl\\FinanceControl\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "FinanceControl\\appsettings.Development.json",
+              "ToolTip": "D:\\MyProjects\\financeControl\\FinanceControl\\FinanceControl\\appsettings.Development.json",
+              "RelativeToolTip": "FinanceControl\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-08-05T14:21:33.704Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FinanceControl.http",
+              "DocumentMoniker": "D:\\MyProjects\\financeControl\\FinanceControl\\FinanceControl\\FinanceControl.http",
+              "RelativeDocumentMoniker": "FinanceControl\\FinanceControl.http",
+              "ToolTip": "D:\\MyProjects\\financeControl\\FinanceControl\\FinanceControl\\FinanceControl.http",
+              "RelativeToolTip": "FinanceControl\\FinanceControl.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-08-05T14:21:27.677Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 770,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:4:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 414,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
