@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FinanceControl")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+37b813de96d72ce616607723e21da8b5b634ddbc")]
 [assembly: System.Reflection.AssemblyProductAttribute("FinanceControl")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FinanceControl")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

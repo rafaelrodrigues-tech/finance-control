@@ -1,5 +1,6 @@
 ﻿using FinanceControl.Models;
 using Microsoft.AspNetCore.Mvc;
+using FinanceControl.Services;
 
 namespace FinanceControl.Controllers;
 
@@ -7,5 +8,5 @@ namespace FinanceControl.Controllers;
 [ApiController]
 public class ExpensesController : ControllerBase
 {
-
+    
 }

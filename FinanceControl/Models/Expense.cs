@@ -1,4 +1,6 @@
-﻿namespace FinanceControl.Models;
+﻿
+namespace FinanceControl.Models;
+
 
 public class Expense
 {
