@@ -9,5 +9,12 @@ public class FinanceControlDbContext : DbContext
         : base(options)
     {
     }
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Expense>()
+            .Property(e => e.DueDate)
+            .HasColumnType("date");
+    }
     public DbSet<Expense> Expenses { get; set; }
+
 }

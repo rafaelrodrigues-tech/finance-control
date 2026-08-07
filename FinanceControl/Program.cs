@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using FinanceControl.Data;
+using FinanceControl.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,8 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 
 builder.Services.AddDbContext<FinanceControlDbContext>(options =>
     options.UseNpgsql(connectionString));
+
+builder.Services.AddScoped<ExpenseService>();
 
 var app = builder.Build();
 
