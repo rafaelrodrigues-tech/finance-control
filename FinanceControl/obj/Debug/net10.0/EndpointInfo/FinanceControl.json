@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/Expenses": {
+    "/Expenses": {
       "post": {
         "tags": [
           "Expenses"
@@ -29,6 +29,16 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Expenses"
+        ],
         "responses": {
           "200": {
             "description": "OK"

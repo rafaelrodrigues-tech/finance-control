@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 
 namespace FinanceControl.Controllers;
 
-[Route("api/[controller]")]
+[Route("[controller]")]
 [ApiController]
 public class ExpensesController : ControllerBase
 {
@@ -24,5 +24,11 @@ public class ExpensesController : ControllerBase
         
         await _expenseService.CreateExpense(expense);
         return Ok();// 200
+    }
+    [HttpGet]
+    public async Task<IActionResult> GetAll()
+    {
+        var expenses = await _expenseService.GetAllExpenses();
+        return Ok(expenses);
     }
 }

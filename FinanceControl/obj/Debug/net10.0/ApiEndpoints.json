@@ -2,7 +2,7 @@
   {
     "ContainingType": "FinanceControl.Controllers.ExpensesController",
     "Method": "Create",
-    "RelativePath": "api/Expenses",
+    "RelativePath": "Expenses",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -13,6 +13,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FinanceControl.Controllers.ExpensesController",
+    "Method": "GetAll",
+    "RelativePath": "Expenses",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   }
 ]
