@@ -30,7 +30,7 @@ public class ExpenseService
                .OrderBy(x => x.DueDate)
                .ToListAsync();
     }
-    public async Task<Expense?> GetExpenseById(int id)
+    public async Task<Expense?> GetExpenseById(int id)// Busca de despesa pelo ID
     {
         return await _financeControlDbContext.Expenses
             .FirstOrDefaultAsync(x => x.Id == id);
