@@ -1,6 +1,8 @@
 ﻿using FinanceControl.Data;
 using FinanceControl.Models;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace FinanceControl.Services;
 
@@ -14,8 +16,6 @@ public class ExpenseService
         _financeControlDbContext = financeControlDbContext;
     }
     //Tasks
-    //GetAllExpenses()
-    //GetExpenseById()
     //UpdateExpense()
     //DeleteExpense()
 
@@ -30,5 +30,9 @@ public class ExpenseService
                .OrderBy(x => x.DueDate)
                .ToListAsync();
     }
-
+    public async Task<Expense?> GetExpenseById(int id)
+    {
+        return await _financeControlDbContext.Expenses
+            .FirstOrDefaultAsync(x => x.Id == id);
+    }
 }

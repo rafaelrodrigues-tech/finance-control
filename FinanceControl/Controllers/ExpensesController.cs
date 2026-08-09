@@ -19,9 +19,9 @@ public class ExpensesController : ControllerBase
 
     }
     [HttpPost]
-    public async Task<IActionResult> Create([FromBody]Expense expense)
+    public async Task<IActionResult> Create([FromBody] Expense expense)
     {
-        
+
         await _expenseService.CreateExpense(expense);
         return Ok();// 200
     }
@@ -31,4 +31,16 @@ public class ExpensesController : ControllerBase
         var expenses = await _expenseService.GetAllExpenses();
         return Ok(expenses);
     }
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetID(int id)
+    {
+        var idExpense =  await _expenseService.GetExpenseById(id);
+        if (idExpense is null)
+        {
+            return NotFound("Despesa não encontrada");
+        }
+        
+        return Ok(idExpense);
+    }
+
 }
