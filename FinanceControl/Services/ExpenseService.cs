@@ -19,20 +19,26 @@ public class ExpenseService
     //UpdateExpense()
     //DeleteExpense()
 
-    public async Task CreateExpense(Expense expense)// Criar uma despesa POST
+    public async Task AddExpense(Expense expense)// Criar uma despesa POST
     {
         await _financeControlDbContext.Expenses.AddAsync(expense);
         await _financeControlDbContext.SaveChangesAsync();
     }
-    public async Task<List<Expense>> GetAllExpenses()// listar todas as despesas, organizadas em ordem de data de vencimento.
+    public async Task<List<Expense>> ListOfExpenses()// listar todas as despesas, organizadas em ordem de data de vencimento.
     {
         return await _financeControlDbContext.Expenses
                .OrderBy(x => x.DueDate)
                .ToListAsync();
     }
-    public async Task<Expense?> GetExpenseById(int id)// Busca de despesa pelo ID
+    public async Task<Expense?> FindByExpense(int id)// Busca de despesa pelo ID
     {
         return await _financeControlDbContext.Expenses
             .FirstOrDefaultAsync(x => x.Id == id);
+    }
+    public async Task RemoveExpense(Expense expense)// remove uma despesa 
+    {
+        _financeControlDbContext.Expenses.Remove(expense);
+        await _financeControlDbContext.SaveChangesAsync();
+
     }
 }
