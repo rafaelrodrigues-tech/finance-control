@@ -1,7 +1,4 @@
-﻿
-using System.ComponentModel.DataAnnotations;
-
-namespace FinanceControl.Models;
+﻿namespace FinanceControl.Models;
 
 
 public class Expense

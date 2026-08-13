@@ -1,8 +1,7 @@
 ﻿using FinanceControl.Data;
+using FinanceControl.Dtos;
 using FinanceControl.Models;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
-using System.Linq;
 
 namespace FinanceControl.Services;
 
@@ -17,7 +16,7 @@ public class ExpenseService
     }
     //Tasks
     //UpdateExpense()
-    //DeleteExpense()
+
 
     public async Task AddExpense(Expense expense)// Criar uma despesa POST
     {
@@ -41,4 +40,17 @@ public class ExpenseService
         await _financeControlDbContext.SaveChangesAsync();
 
     }
+    public async Task UpdateExpenseDTO(Expense idExpense, UpdateExpenseDto Dto)
+    {
+        //Mapeamento na unha =>  
+        if (Dto.Title != null) idExpense.Title = Dto.Title;
+        if (Dto.Amount != null) idExpense.Amount = Dto.Amount.Value;
+        if (Dto.DueDate != null) idExpense.DueDate = Dto.DueDate.Value;
+        if (Dto.IsPaid != null) idExpense.IsPaid = Dto.IsPaid.Value;
+        if (Dto.Description != null) idExpense.Description = Dto.Description;
+
+
+        await _financeControlDbContext.SaveChangesAsync();
+    }
+
 }

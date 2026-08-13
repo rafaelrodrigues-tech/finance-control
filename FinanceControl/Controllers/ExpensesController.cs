@@ -1,9 +1,7 @@
-﻿using FinanceControl.Data;
+﻿using FinanceControl.Dtos;
 using FinanceControl.Models;
 using FinanceControl.Services;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Infrastructure;
-using 
 
 namespace FinanceControl.Controllers;
 
@@ -47,7 +45,7 @@ public class ExpensesController : ControllerBase
     }
 
     [HttpDelete("{id}")]
-    public async Task<IActionResult> DeleteExpense(int id, Expense expense)
+    public async Task<IActionResult> DeleteExpense(int id)
     {
         var idExpense = await _expenseService.FindByExpense(id);
         if (idExpense is null)
@@ -56,5 +54,19 @@ public class ExpensesController : ControllerBase
         }
         await _expenseService.RemoveExpense(idExpense);
         return Ok("Despesa removida com sucesso");
+    }
+    [HttpPatch("{id}")]
+    public async Task<IActionResult> UpdateExpense([FromRoute]int id,[FromBody]UpdateExpenseDto Dto)
+    {
+        var idExpense = await _expenseService.FindByExpense(id);
+
+        if (idExpense is null)
+        {
+            return NotFound("Despesa não encontrada");
+        }
+
+        //passa a despesa junto com a alteração(DTO) para o service
+        await _expenseService.UpdateExpenseDTO(idExpense, Dto);
+        return Ok();
     }
 }
