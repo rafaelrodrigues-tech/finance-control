@@ -14,10 +14,6 @@ public class ExpenseService
     {
         _financeControlDbContext = financeControlDbContext;
     }
-    //Tasks
-    //UpdateExpense()
-
-
     public async Task AddExpense(Expense expense)// Criar uma despesa POST
     {
         await _financeControlDbContext.Expenses.AddAsync(expense);

@@ -11,9 +11,17 @@ public class FinanceControlDbContext : DbContext
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Expense>()
-            .Property(e => e.DueDate)
-            .HasColumnType("date");
+        base.OnModelCreating(modelBuilder);
+
+        modelBuilder.Entity<Expense>(b =>
+        {
+            // Garante que a chave primária é gerada automaticamente pelo banco
+            b.HasKey(e => e.Id);
+            b.Property(e => e.Id).ValueGeneratedOnAdd();
+
+            // Sua configuração existente da data
+            b.Property(e => e.DueDate).HasColumnType("date");
+        });
     }
     public DbSet<Expense> Expenses { get; set; }
 
