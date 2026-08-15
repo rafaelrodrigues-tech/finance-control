@@ -2,6 +2,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using FinanceControl.Data;
 using FinanceControl.Services;
+using FinanceControl.ExeptionsBase;
+using FinanceControl.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,6 +30,8 @@ if (app.Environment.IsDevelopment())
     app.MapSwaggerUI();
     app.MapSwagger();
 }
+
+app.UseMiddleware<ExceptionMiddleware>();
 
 app.UseHttpsRedirection();
 
