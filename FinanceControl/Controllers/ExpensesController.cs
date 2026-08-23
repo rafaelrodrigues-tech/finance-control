@@ -1,4 +1,5 @@
-﻿using FinanceControl.Dtos;
+﻿using FinanceControl.Converters;
+using FinanceControl.Dtos;
 using FinanceControl.ExeptionsBase;
 using FinanceControl.Models;
 using FinanceControl.Services;
@@ -11,7 +12,6 @@ namespace FinanceControl.Controllers;
 [ApiController]
 public class ExpensesController : ControllerBase
 {
-
     private readonly ExpenseService _expenseService;
     public ExpensesController(ExpenseService expenseService)
     {
@@ -21,9 +21,10 @@ public class ExpensesController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> CreateExpense([FromBody] Expense expense)
     {
-        
-        await ValidateAndThrowOnFailures(expense);// primeira validação
+        expense.Title = expense.Title.NormalizeTitle();
+        expense.Description = expense.Description.NormalizeDescription();
 
+        ValidateAndThrowOnFailures(expense);// Validação da request
         await _expenseService.AddExpense(expense);
         return Created();
     }
@@ -59,7 +60,7 @@ public class ExpensesController : ControllerBase
         return Ok("Despesa removida com sucesso");
     }
     [HttpPatch("{id}")]
-    public async Task<IActionResult> UpdateExpense([FromRoute]int id,[FromBody]UpdateExpenseDto Dto)
+    public async Task<IActionResult> UpdateExpense([FromRoute] int id, [FromBody] UpdateExpenseDto Dto)
     {
         var idExpense = await _expenseService.FindByExpense(id);
 
@@ -72,14 +73,14 @@ public class ExpensesController : ControllerBase
         await _expenseService.UpdateExpenseDTO(idExpense, Dto);
         return Ok();
     }
-    private async Task ValidateAndThrowOnFailures(Expense expense)
+    private static void ValidateAndThrowOnFailures(Expense expense)//Somente esse controller precisa ter o acesso da validação, por isso privado.
     {
-        var validator = new ExpenseValidator();
-        var result = validator.Validate(expense);
+        var validator = new ExpenseValidator();//atribui as regras
+        var result = validator.Validate(expense); // executa as regras
 
-        if (result.IsValid == false)
+        if (result.IsValid == false)//Se o resultado da validação NÃO for válido, entre aqui
         {
-            var ErrorMessages = result.Errors.Select(erros => erros.ErrorMessage).ToList();
+            var ErrorMessages = result.Errors.Select(erros => erros.ErrorMessage).ToList();//cria a lista
             throw new ErrorOnValidationException(ErrorMessages);
         }
     }

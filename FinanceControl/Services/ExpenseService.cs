@@ -9,7 +9,6 @@ public class ExpenseService
 {
     private readonly FinanceControlDbContext _financeControlDbContext;
 
-
     public ExpenseService(FinanceControlDbContext financeControlDbContext)
     {
         _financeControlDbContext = financeControlDbContext;
@@ -44,7 +43,6 @@ public class ExpenseService
         if (Dto.DueDate != null) idExpense.DueDate = Dto.DueDate.Value;
         if (Dto.IsPaid != null) idExpense.IsPaid = Dto.IsPaid.Value;
         if (Dto.Description != null) idExpense.Description = Dto.Description;
-
 
         await _financeControlDbContext.SaveChangesAsync();
     }

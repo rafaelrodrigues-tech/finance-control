@@ -1,9 +1,7 @@
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 using FinanceControl.Data;
-using FinanceControl.Services;
-using FinanceControl.ExeptionsBase;
 using FinanceControl.Middlewares;
+using FinanceControl.Services;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +17,8 @@ builder.Services.AddDbContext<FinanceControlDbContext>(options =>
     options.UseNpgsql(connectionString));
 
 builder.Services.AddScoped<ExpenseService>();
+
+builder.Services.AddRouting(options => options.LowercaseUrls = true);
 
 var app = builder.Build();
 

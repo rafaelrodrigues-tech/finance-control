@@ -1,17 +1,18 @@
-﻿using System.Text.Json;
+﻿using System.Text.Json;//converter objetos C# para JSON.
 using FinanceControl.ExeptionsBase;
 
-namespace FinanceControl.Middlewares;
+namespace FinanceControl.Middlewares;//Quem captura a exceção e transforma em resposta HTTP
 
 public class ExceptionMiddleware
 {
-    private readonly RequestDelegate _next;
+    private readonly RequestDelegate _next;//o próximo componente do pipeline(sequência de etapas ou instruções automatizadas
+                                           //em que a saída de uma fase serve como entrada para a seguinte).
 
     public ExceptionMiddleware(RequestDelegate next)
     {
         _next = next;
     }
-    public async Task InvokeAsync(HttpContext context)
+    public async Task InvokeAsync(HttpContext context)//HttpContext representa o contexto daquela requisição/resposta.
     {
         try
         {
@@ -22,9 +23,9 @@ public class ExceptionMiddleware
             context.Response.StatusCode = StatusCodes.Status400BadRequest;
             context.Response.ContentType = "application/json";
 
-            var response = new
+            var response = new//objeto c#
             {
-                errors = ex.GetErrorMessages()
+                errors = ex.GetErrorMessages()//mensagens q foram guardadas
             };
 
             await context.Response.WriteAsync(
