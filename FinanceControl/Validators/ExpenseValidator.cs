@@ -9,10 +9,17 @@ public class ExpenseValidator : AbstractValidator<Expense>
         RuleFor(expense => expense.Title)
             .NotEmpty()
             .WithMessage("O nome não pode ser vazio")
-            .Length(3,30).WithMessage("O nome deve ter entre 3 e 30 caracteres. ");
+            .Length(3,30)
+            .WithMessage("O nome deve ter entre 3 e 30 caracteres. ");
 
         RuleFor(expense => expense.Amount)
             .Must(Amount => Amount > 0)
             .WithMessage("O valor deve ser maior que Zero");
+
+        RuleFor(expense => expense.DueDate)
+            .NotEmpty()
+            .WithMessage("A data não pode ser vazia")
+            .Must(dueDate => dueDate >= DateOnly.FromDateTime(DateTime.Now))
+            .WithMessage("A data não pode ser atrasada");
     }
 }

@@ -26,13 +26,17 @@ public class ExpensesController : ControllerBase
 
         ValidateAndThrowOnFailures(expense);// Validação da request
         await _expenseService.AddExpense(expense);
-        return Created();
+        return Created();//adicionar menssagem de criação?
     }
 
-    [HttpGet]
+    [HttpGet]//revisar daqui
     public async Task<IActionResult> GetAllExpenses()
     {
         var expenses = await _expenseService.ListOfExpenses();
+        if (expenses is null)
+        {
+            return NotFound("Nenhuma despesa encontrada");
+        }
         return Ok(expenses);
     }
 
