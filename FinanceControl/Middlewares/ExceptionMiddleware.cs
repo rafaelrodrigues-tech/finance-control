@@ -18,7 +18,7 @@ public class ExceptionMiddleware
         {
             await _next(context);
         }
-        catch (ErrorOnValidationException ex)
+        catch (ErrorOnValidationException ex)// erros esperados(cliente)
         {
             context.Response.StatusCode = StatusCodes.Status400BadRequest;
             context.Response.ContentType = "application/json";
@@ -26,6 +26,20 @@ public class ExceptionMiddleware
             var response = new//objeto c#
             {
                 errors = ex.GetErrorMessages()//mensagens q foram guardadas
+            };
+
+            await context.Response.WriteAsync(
+                JsonSerializer.Serialize(response)
+            );
+        }
+        catch (Exception ex)
+        {
+            context.Response.StatusCode = StatusCodes.Status500InternalServerError;
+            context.Response.ContentType = "application/json";
+
+            var response = new
+            {
+                error = "Internal server error."
             };
 
             await context.Response.WriteAsync(

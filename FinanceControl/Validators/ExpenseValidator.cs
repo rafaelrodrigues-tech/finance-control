@@ -13,6 +13,8 @@ public class ExpenseValidator : AbstractValidator<Expense>
             .WithMessage("O nome deve ter entre 3 e 30 caracteres. ");
 
         RuleFor(expense => expense.Amount)
+            .NotEmpty()
+            .WithMessage("Deve se colocar um valor referente a despesa.")
             .Must(Amount => Amount > 0)
             .WithMessage("O valor deve ser maior que Zero");
 
