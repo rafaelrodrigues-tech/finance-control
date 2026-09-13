@@ -51,7 +51,7 @@ public class ExceptionMiddleware
             await HandleExceptionAsync(
                 context,
                 StatusCodes.Status500InternalServerError,
-                new { error = "Internal server error." }
+                new { error = "Erro interno do servidor" }
             );
         }
     }
