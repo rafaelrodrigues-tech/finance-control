@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("73591f43-cdc1-4428-93be-2d64d8d6c8fb")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("FinanceControl")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+91c1dccf7045ed5dbfda5bf630d1c15afad67996")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1e8bfaa73a141297c9ff1f7dcea76e0dae439c2e")]
 [assembly: System.Reflection.AssemblyProductAttribute("FinanceControl")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FinanceControl")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

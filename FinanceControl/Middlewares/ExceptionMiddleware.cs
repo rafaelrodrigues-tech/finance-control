@@ -15,32 +15,26 @@ public class ExceptionMiddleware
     // Registrador de logs nativo do ASP.NET Core para gravar detalhes dos erros no console ou arquivos
     private readonly ILogger<ExceptionMiddleware> _logger;
 
-    // O construtor recebe as dependências via Injeção de Dependência do próprio ASP.NET Core
     public ExceptionMiddleware(RequestDelegate next, ILogger<ExceptionMiddleware> logger)
     {
         _next = next;
         _logger = logger;
     }
-
-    // Método chamado automaticamente pelo ASP.NET Core a cada requisição que chega à API
     public async Task InvokeAsync(HttpContext context)
     {
         try
         {
-            // Passa a requisição para o próximo middleware ou controller continuar o processamento
             await _next(context);
         }
-        catch (ErrorOnValidationException ex)
+        catch (ErrorOnValidationException ex)// Erro esperado
         {
-            // CAPTURA: Erros de validação de dados/regras de negócio que você lançar na aplicação
-            // RESPOSTA: HTTP 400 (Bad Request) informando ao cliente exatamente quais dados estavam errados
             await HandleExceptionAsync(
                 context,
                 StatusCodes.Status400BadRequest,
                 new { errors = ex.GetErrorMessages() }
             );
         }
-        catch (Exception ex)
+        catch (Exception ex)//erro inesperado
         {
             // CAPTURA: Qualquer erro inesperado (falhas de banco de dados, NullReferenceException, bugs, etc.)
 
