@@ -5,6 +5,7 @@ using FinanceControl.ExeptionsBase;
 using FinanceControl.Models;
 using FinanceControl.Validators;
 using Microsoft.EntityFrameworkCore;
+using FluentValidation;
 
 namespace FinanceControl.Services;
 
@@ -21,7 +22,7 @@ public class ExpenseService
         expense.Title = expense.Title.NormalizeTitle();
         expense.Description = expense.Description.NormalizeDescription();
 
-        ValidateAndThrowOnFailures(expense);// Validação da request
+        ValidateAndThrowOnFailures(expense, isCreation: true);// Validação da request
 
         await _financeControlDbContext.Expenses.AddAsync(expense);
         await _financeControlDbContext.SaveChangesAsync();
@@ -56,10 +57,13 @@ public class ExpenseService
 
         await _financeControlDbContext.SaveChangesAsync();
     }
-    private static void ValidateAndThrowOnFailures(Expense expense)//Somente esse controller precisa ter o acesso da validação, por isso privado.
+    private static void ValidateAndThrowOnFailures(Expense expense, bool isCreation = false)//Somente esse controller precisa ter o acesso da validação, por isso privado.
     {
         var validator = new ExpenseValidator();//atribui as regras
-        var result = validator.Validate(expense); // executa as regras  => esse objeto passou em todas as regras?
+        var result = isCreation
+            ? validator.Validate(expense, options =>
+                  options.IncludeRuleSets("Create").IncludeRulesNotInRuleSet())
+            : validator.Validate(expense);
 
         if (result.IsValid == false)//Se não passou,Se o resultado da validação NÃO for válido, entre aqui
         {
